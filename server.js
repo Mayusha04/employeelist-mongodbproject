@@ -26,8 +26,8 @@ app.engine(
       handlebars: allowInsecurePrototypeAccess(Handlebars),
     })
   );
-heapp.set('view engine', 'hbs');
-var port = process.env.PORT || 8080;
+  app.set('view engine', 'hbs');
+const port = process.env.PORT || 8080;
 app.listen(8080, () => {
     console.log('Express server started at port : 8080');
 });
