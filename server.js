@@ -6,7 +6,7 @@ const bodyparser = require('body-parser');
 const exphbs = require("express-handlebars");
  const Handlebars = require('handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
-const port = process.env.PORT||8080;
+
 
 
 const employeeController = require('./controllers/employeeController');
@@ -26,8 +26,8 @@ app.engine(
       handlebars: allowInsecurePrototypeAccess(Handlebars),
     })
   );
-app.set('view engine', 'hbs');
-
+heapp.set('view engine', 'hbs');
+var port = process.env.PORT || 8080;
 app.listen(8080, () => {
     console.log('Express server started at port : 8080');
 });
