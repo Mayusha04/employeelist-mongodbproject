@@ -1,5 +1,6 @@
 require('./models/db');
 
+const DB = 'mongodb+srv://emplloyee-mongodb:test@employeecluster.bnzk5.mongodb.net/employee?retryWrites=true&w=majority';
 const express = require('express');
 const path = require('path');
 const bodyparser = require('body-parser');
@@ -27,8 +28,8 @@ app.engine(
     })
   );
   app.set('view engine', 'hbs');
-const port = process.env.PORT || 8080;
-app.listen(8080, () => {
+
+app.listen(process.env.PORT|| 8080, () => {
     console.log('Express server started at port : 8080');
 });
 
