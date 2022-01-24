@@ -1,6 +1,6 @@
 require('./models/db');
 
-const DB = 'mongodb+srv://emplloyee-mongodb:test@employeecluster.bnzk5.mongodb.net/employee?retryWrites=true&w=majority';
+
 const express = require('express');
 const path = require('path');
 const bodyparser = require('body-parser');
@@ -11,6 +11,7 @@ const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-ac
 
 
 const employeeController = require('./controllers/employeeController');
+const { Mongoose } = require('mongoose');
 
 var app = express();
 app.use(bodyparser.urlencoded({
